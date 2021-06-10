@@ -1,4 +1,4 @@
-export default {
+const Response =  {
   kind: "customsearch#search",
   url: {
     type: "application/json",
@@ -546,3 +546,5 @@ export default {
     },
   ],
 };
+
+export default Response;
