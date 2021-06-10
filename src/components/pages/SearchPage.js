@@ -15,10 +15,10 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 function SearchPage() {
   const [{ term = "Tesla" }, dispatch] = useStateValue();
   //   LiveAPI Call
-    const { data } = useGoogleSearch(term);
-    console.log(data)
-    // Mock API CALL
-    // const data = Response;
+  const { data } = useGoogleSearch(term);
+  console.log(data);
+  // Mock API CALL
+  // const data = Response;
   console.log(data);
   return (
     <div className="searchPage">
@@ -84,7 +84,10 @@ function SearchPage() {
                   item.pagemap?.cse_image[0]?.src && (
                     <img
                       className="searchPage__resultImage"
-                      src={item.pagemap?.cse_image?.length > 0 && item.pagemap?.cse_image[0]?.src}
+                      src={
+                        item.pagemap?.cse_image?.length > 0 &&
+                        item.pagemap?.cse_image[0]?.src
+                      }
                       alt=""
                     />
                   )}
